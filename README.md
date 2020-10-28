@@ -1,124 +1,59 @@
-1. Counting Sheep
-Write a recursive function that counts how many sheep jump over the fence. Your program should take a number as input. That number should be the number of sheep you have. The function should display the number along with the message "Another sheep jumps over the fence" until no more sheep are left.
+1. How many searches?
+Given a sorted list 3, 5, 6, 8, 11, 12, 14, 15, 17, 18 and using the recursive binary search algorithm, identify the sequence of numbers that each recursive call will search to try and find 8.
 
-Input: 3
-Output:
-3: Another sheep jumps over the fence
-2: Another sheep jumps over the fence
-1: Another sheep jumps over the fence
-All sheep jumped over the fence
+Given a sorted list 3, 5, 6, 8, 11, 12, 14, 15, 17, 18 and using the recursive binary search algorithm, identify the sequence of numbers that each recursive call will search to try and find 16.
 
-2. Power Calculator
-Write a function called powerCalculator() that takes two parameters, an integer as a base, and another integer as an exponent. The function returns the value of the base raised to the power of the exponent. Use only exponents greater than or equal to 0 (positive numbers)
+2. Adding a React UI
+For exercises 1 and 2, you will be using a search algorithm to search for an item in a dataset. You will be testing the efficiency of 2 search algorithms, linear search and binary search. You will also have a UI (a simple textbox will do) through which you will be sending your input that you want to search. There is no server-side to this program. All of this should be done using React.
 
-powerCalculator(10,2) should return 100
-powerCalculator(10,-2) should return exponent should be >= 0
+1) Linear search
 
-3. Reverse String
-Write a function that reverses a string. Take a string as input, reverse the string, and return the new string.
-
-4. nth Triangular Number
-Calculate the nth triangular number. A triangular number counts the objects that can form an equilateral triangle. The nth triangular number is the number of dots composing a triangle with n dots on a side, and is equal to the sum of the n natural numbers from 1 to n. This is the Triangular Number Sequence: 1, 3, 6, 10, 15, 21, 28, 36, 45.
+Given the following dataset, find out how many tries it took to search for a particular item in the dataset. If the item is not in the dataset, provide a message and indicate how many searches it took to find that out.
 ```
-                          *
-            *           *    *
-*     |   *   *  |   *    *    *  |
-
- 1st       2nd           3rd             nth?  
+89, 30, 25, 32, 72, 70, 51, 42, 25, 24, 53, 55, 78, 50, 13, 40, 48, 32, 26, 2, 14, 33, 45, 72, 56, 44, 21, 88, 27, 68, 15, 62, 93, 98, 73, 28, 16, 46, 87, 28, 65, 38, 67, 16, 85, 63, 23, 69, 64, 91, 9, 70, 81, 27, 97, 82, 6, 88, 3, 7, 46, 13, 11, 64, 76, 31, 26, 38, 28, 13, 17, 69, 90, 1, 6, 7, 64, 43, 9, 73, 80, 98, 46, 27, 22, 87, 49, 83, 6, 39, 42, 51, 54, 84, 34, 53, 78, 40, 14, 5,
 ```
 
-5. String Splitter
-Write a recursive function that splits a string based on a separator (similar to String.prototype.split). Don't use JS array's split function to solve this problem.
+2) Binary search
 
-Input: 02/20/2020
-Output: ["02", "20", "2020"]
+Use the same front end and the dataset from the previous exercise for this exercise. Use array.sort to sort the dataset. Then implement a binary search to find a particular value in the dataset. Display how many tries it took to search for a particular item in the dataset using binary search. If the item is not in the dataset, provide a message and indicate how many searches it took to find that out.
 
-6. Fibonacci
-Write a recursive function that prints the Fibonacci sequence of a given number. The Fibonacci sequence is a series of numbers in which each number is the sum of the 2 preceding numbers. For example, the 7th Fibonacci number in a Fibonacci sequence is 13. The sequence looks as follows: 1, 1, 2, 3, 5, 8, 13.
+3. Find a book
+Imagine you are looking for a book in a library with a Dewey Decimal index. How would you go about it? Can you express this process as a search algorithm? Implement your algorithm to find a book whose Dewey and book title is provided.
 
-7. Factorial
-Write a recursive function that finds the factorial of a given number. The factorial of a number can be found by multiplying that number by each number between itself and 1. For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+4. Searching in a BST
+** No coding is needed for these drills**. Once you have answered it, you can then code the tree and implement the traversal to see if your answer is correct.
 
-8. Find a way out of the maze
-You have entered a Maze and need to find your way out of it. There are more than one possible paths through the Maze to the single exit point. Write a recursive function that will help you find a possible path through the maze.
+1) Given a binary search tree whose in-order and pre-order traversals are respectively 14 15 19 25 27 35 79 89 90 91 and 35 25 15 14 19 27 89 79 91 90. What would be its postorder traversal?
 
-You can use the following mazes to test your program.
+2) The post order traversal of a binary search tree is 5 7 6 9 11 10 8. What is its pre-order traversal?
+
+5. Implement different tree traversals
+Using your BinarySearchTree class from your previous lesson, create a binary search tree with the following dataset: 25 15 50 10 24 35 70 4 12 18 31 44 66 90 22. Then implement inOrder(), preOrder(), and postOrder() functions. Test your functions with the following datasets.
+
+A pre-order traversal should give you the following order: 25, 15, 10, 4, 12, 24, 18, 22, 50, 35, 31, 44, 70, 66, 90
+
+In-order: 4, 10, 12, 15, 18, 22, 24, 25, 31, 35, 44, 50, 66, 70, 90
+
+Post-order: 4, 12, 10, 22, 18, 24, 15, 31, 44, 35, 66, 90, 70, 50, 25
+
+6. Find the next commanding officer
+Suppose you have a tree representing a command structure of the Starship USS Enterprise.
 ```
-let mySmallMaze = [
-    [' ', ' ', ' '],
-    [' ', '*', ' '],
-    [' ', ' ', 'e']
-];
-
-let maze = [
-    [' ', ' ', ' ', '*', ' ', ' ', ' '],
-    ['*', '*', ' ', '*', ' ', '*', ' '],
-    [' ', ' ', ' ', ' ', ' ', ' ', ' '],
-    [' ', '*', '*', '*', '*', '*', ' '],
-    [' ', ' ', ' ', ' ', ' ', ' ', 'e']
-];
-```
-
-The Maze is represented as a N*M matrix (in the above case, a 3X3 or a 5X7 array). The starting point is the top left corner and the exit is indicated by e. For simplicity purpose, use the bottom right corner of the maze as the exit. You can't go outside the boundaries of the maze. The maze has passages that are blocked and you can't go through them. These blocked passages are indicated by *. Passing through a blocked cell as well as passing though a cell that you have already passed before are forbidden.
-
-For the above maze, a possible exit path can be RRDDLLDDRRRRRR
-
-9. Find ALL the ways out of the maze
-Use the above maze and modify your solution so it finds All the possible exit paths through the Maze. To find all possible exit paths through the maze, think about how many places you can move at each turn. Possibly up, down, left or right?
-
-Notice that this maze has 3 exits paths. Your recursive function should print all three of the paths with the proper directions. For example, given the maze above, the program should output the following:
-```
-Path to the exit: RRDDLLDDRRRRRR
-Path to the exit: RRDDRRUURRDDDD
-Path to the exit: RRDDRRRRDD
+               Captain Picard
+             /                \
+    Commander Riker       Commander Data
+      /         \               \
+ Lt. Cmdr.   Lt. Cmdr.          Lt. Cmdr.
+ Worf        LaForge            Crusher
+   /                           /
+Lieutenant                  Lieutenant
+security-officer            Selar
 ```
 
-10. Anagrams
-An anagram is any word or phrase that uses the letters of a given ("subject") word or phrase in another, rearranged order. Write a function that creates an anagram list, listing all the rearrangements of a given word. For example, if the user types "east", the program should list all 24 permutations, including "eats", "etas", "teas", and non-words like "tsae".
+This tree is meant to represent who is in charge of lower-ranking officers. For example, Commander Riker is directly responsible for Worf and LaForge. People of the same rank are at the same level in the tree. However, to distinguish between people of the same rank, those with more experience are on the left and those with less on the right (i.e., experience decreases from left to right). Suppose a fierce battle with an enemy ensues. Write a program that will take this tree of commanding officers and outlines the ranking officers in their ranking order so that if officers start dropping like flies, we know who is the next person to take over command.
 
-Hint: For your algorithm, you might want to think about a prefix and use that to create the new words. For example, given "east", use "e" as a prefix and place it in front of all 6 permutations of "ast" — "ast", "ats", "sat", "sta", "tas", and "tsa". This will give you the words "east", "eats", "esat", "esta", "etas", and "etsa". Continue this way until you find all the anagrams for "east". Then you can use "a" as a prefix and permute the remaining words "est". For "east", there should be 24 words.
+7. Max profit
+The share price for a company over a week's trading is as follows: [128, 97, 121, 123, 98, 97, 105]. If you had to buy shares in the company on a particular day, and sell the shares on a subsequent day, write an algorithm to work out what the maximum profit you could make would be.
 
-11. Organization Chart
-Write a recursive function that prints the following organization chart. Your output should be as shown below with proper indentation to show the hierarchy. You may store the org chart in an object and send that as an input to your program.
-
-```
-Zuckerberg
-    Schroepfer
-        Bosworth
-            Steve
-            Kyle
-            Andra
-        Zhao
-            Richie
-            Sofia
-            Jen
-    Schrage
-        VanDyck
-            Sabrina
-            Michelle
-            Josh
-        Swain
-            Blanch
-            Tom
-            Joe
-    Sandberg
-        Goler
-            Eddie
-            Julie
-            Annie
-       Hernandez
-            Rowi
-            Inga
-            Morgan
-       Moissinac
-            Amy
-            Chuck
-            Vinni
-       Kelley
-            Eric
-            Ana
-            Wes
-```
-
-12. Binary Representation
-Write a recursive function that prints out the binary representation of a given number. For example, the program should take 3 as an input and print 11 as output, or 25 as an input and print 11001 as an output. Note that the binary representation of 0 should be 0.
+8. Egg drop (optional)
+This is a fun exercise to do - consider this optional after you are done with all the exercises above. Imagine that you wanted to find the highest floor of a 100 story building that you could drop an egg from without the egg breaking. But you only have 2 eggs. Write an algorithm to find out in the most efficient way which floors you should drop the eggs from. After you have understood the question and made some attempts to solve the problem, go through this reading before you start coding: http://datagenetics.com/blog/july22012/index.html.
